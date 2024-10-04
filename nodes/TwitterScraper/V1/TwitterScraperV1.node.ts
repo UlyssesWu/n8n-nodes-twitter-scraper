@@ -205,6 +205,14 @@ export class TwitterScraperV1 implements INodeType {
 
 						responseData = await rettiwt.user.timeline(userData.id, limit)
 					}
+
+					if (operation === 'getLikes') {
+						const username = this.getNodeParameter('user', i, '', {}) as INodeParameterResourceLocator
+						const limit = this.getNodeParameter('limit', i);
+						const userData = await rettiwt.user.details(username.value as string)
+
+						responseData = await rettiwt.user.likes(userData.id, limit);
+					}
 				}
 
 				const executionData = this.helpers.constructExecutionMetaData(

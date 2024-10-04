@@ -1,19 +1,19 @@
 {
 	"name": "n8n-nodes-twitter-scraper",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "Consume Twitter without their API",
 	"keywords": [
 		"n8n-community-node-package"
 	],
 	"license": "MIT",
-	"homepage": "https://github.com/AlejandroAkbal/n8n-nodes-twitter-scraper",
+	"homepage": "https://github.com/UlyssesWu/n8n-nodes-twitter-scraper",
 	"author": {
-		"name": "Alejandro Akbal",
-		"email": "alejandro@localhost"
+		"name": "Alejandro Akbal & Ulysses Wu",
+		"email": "wdwxy12345@gmail.com"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/AlejandroAkbal/n8n-nodes-twitter-scraper.git"
+		"url": "https://github.com/UlyssesWu/n8n-nodes-twitter-scraper.git"
 	},
 	"main": "index.js",
 	"scripts": {

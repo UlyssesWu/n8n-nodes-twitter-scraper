@@ -24,12 +24,16 @@ export const userOperations: INodeProperties[] = [
 				description: 'Retrieve a user\'s timeline',
 				action: 'Get user timeline',
 			},
+			{
+				name: 'Get Likes',
+				value: 'getLikes',
+				description: 'Retrieve a user\'s recent liked tweets',
+				action: 'Get user likes',
+			},
 		],
 		default: 'getUser',
 	},
 ];
-
-
 
 export const userFields: INodeProperties[] = [
 	/* -------------------------------------------------------------------------- */
@@ -72,7 +76,7 @@ export const userFields: INodeProperties[] = [
 				resource: ['user'],
 			},
 		},
-		default: false,
+		default: true,
 		description: 'Whether you want to search the authenticated user',
 	},
 
@@ -88,7 +92,7 @@ export const userFields: INodeProperties[] = [
 		description: 'The user you want to search',
 		displayOptions: {
 			show: {
-				operation: ['getTimeline'],
+				operation: ['getTimeline', 'getLikes'],
 				resource: ['user'],
 			},
 		},
@@ -115,7 +119,7 @@ export const userFields: INodeProperties[] = [
 		},
 		displayOptions: {
 			show: {
-				operation: ['getTimeline'],
+				operation: ['getTimeline', 'getLikes'],
 				resource: ['user'],
 			},
 		},
